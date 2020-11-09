@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -61,6 +61,88 @@
                         android:layout_marginLeft="@dimen/marginHome"
                         android:layout_marginTop="@dimen/marginHome">
                     </TextView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/altoImageViewHome"
+                        android:src="@drawable/platzi_conf_2"
+                        android:layout_marginTop="10dp">
+                    </ImageView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_por_que"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/tamañoTitulo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginRight="@dimen/marginHome"
+                        android:layout_marginLeft="@dimen/marginHome"
+                        android:layout_marginTop="@dimen/marginHome">
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp">
+                    </View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_por_que_resp"
+                        android:textSize="@dimen/tamañoTexto"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginHome"
+                        android:layout_marginLeft="@dimen/marginHome"
+                        android:layout_marginTop="@dimen/marginHome">
+                    </TextView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/altoImageViewHome"
+                        android:src="@drawable/platzi_conf_3"
+                        android:layout_marginTop="10dp">
+                    </ImageView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp">
+                    </View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_info"
+                        android:textSize="@dimen/tamañoTexto"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginHome"
+                        android:layout_marginLeft="@dimen/marginHome"
+                        android:layout_marginTop="@dimen/marginHome">
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp">
+                    </View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_info_resp"
+                        android:textSize="@dimen/tamañoTexto"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginHome"
+                        android:layout_marginLeft="@dimen/marginHome"
+                        android:layout_marginTop="@dimen/marginHome">
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp">
+                    </View>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
