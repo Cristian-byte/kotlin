@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvItemScheduleHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:gravity="right|bottom"
+                android:textSize="@dimen/ItemScheduleTitulo"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/tvItemScheduleAM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A.M"
+                android:gravity="right|top"
+                android:textSize="@dimen/ItemScheduleSubTitulo"
+                android:textColor="@color/colorPrimary">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
