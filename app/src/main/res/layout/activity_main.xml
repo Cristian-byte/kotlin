@@ -16,8 +16,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/toolbarAlto"
-                android:src="@drawable/logo_platzi_conf"
-                android:layout_margin="">
+                android:src="@drawable/logo_platzi_conf">
             </ImageView>
         </Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -25,8 +24,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behaivor="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_behaivor="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <fragment
+            android:id="@+id/fragContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bnvMenu"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="10dp"
+            app:navGraph="@navigation/nav_graph"
+            app:defaultNavHost="true"/>
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvMenu"
             android:layout_width="match_parent"
