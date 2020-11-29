@@ -62,6 +62,6 @@ class ScheduleFragment(
 
     override fun onConferenceClicked(conference: Conference, position: RecyclerView.RecyclerListener) {
         val bundle = bundleOf("conference" to conference)
-        findNavController().navigate(R.id.scheduleDetailFragmentDialog, bundle)
+        findNavController().navigate(R.id.tvDetailConferenceDescription, bundle)
     }
 }

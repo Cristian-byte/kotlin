@@ -2,11 +2,13 @@
 <resources>
     <dimen name="altoLogoPlatzi">45dp</dimen>
     <dimen name="toolbarAlto">30dp</dimen>
-    <dimen name="cardCornerRadious">4dp</dimen>
+    <dimen name="cardCornersRadius">4dp</dimen>
     <dimen name="altoImageViewHome">150dp</dimen>
-    <dimen name="tamañoTitulo">20sp</dimen>
-    <dimen name="marginHome">10dp</dimen>
-    <dimen name="tamañoTexto">15sp</dimen>
-    <dimen name="ItemScheduleTitulo">30sp</dimen>
-    <dimen name="ItemScheduleSubTitulo">20sp</dimen>
+
+    <dimen name="sizeTitulo">20sp</dimen>
+    <dimen name="marginHomeSubtitle">10dp</dimen>
+    <dimen name="sizeSubtitle">15sp</dimen>
+
+    <dimen name="itemScheduleTitle">30sp</dimen>
+    <dimen name="itemScheduleSubtitle">20sp</dimen>
 </resources>
