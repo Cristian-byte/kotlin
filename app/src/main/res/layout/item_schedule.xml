@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -19,57 +21,54 @@
                 android:layout_height="wrap_content"
                 android:text="00:00"
                 android:gravity="right|bottom"
-                android:textSize="@dimen/ItemScheduleTitulo"
+                android:textSize="@dimen/itemScheduleTitle"
                 android:textColor="@color/colorAccent"
-                android:textStyle="bold">
-            </TextView>
+                android:textStyle="bold"/>
             <TextView
-                android:id="@+id/tvItemScheduleAM"
+                android:id="@+id/tvItemScheduleAMPM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A.M"
+                android:text="A.M."
                 android:gravity="right|top"
-                android:textSize="@dimen/ItemScheduleSubTitulo"
-                android:textColor="@color/colorPrimary">
-            </TextView>
+                android:textSize="@dimen/itemScheduleSubtitle"
+                android:textColor="@color/colorPrimary" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:orientation="vertical"
-            android:layout_marginLeft="15dp">
+            android:layout_marginLeft="10dp">
             <TextView
                 android:id="@+id/tvItemScheduleConferenceName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre de la conferencia"
-                android:textSize="20sp"
+                android:text="Nombre de la Conferencia"
                 android:textColor="@color/colorPrimaryDark"
                 android:ellipsize="end"
-                android:lines="1">
-            </TextView>
+                android:lines="1" />
             <TextView
                 android:id="@+id/tvItemScheduleConferenceSpeaker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Speaker name"
+                android:text="Speaker Name"
                 android:textSize="15sp"
                 android:textColor="@color/colorPrimary"
                 android:ellipsize="end"
-                android:lines="1">
-            </TextView>
+                android:lines="1"/>
             <TextView
                 android:id="@+id/tvItemScheduleTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tag"
-                android:textColor="#FFFFFF"
                 android:ellipsize="end"
                 android:lines="1"
-                android:background="@drawable/shape_topico">
-            </TextView>
+                android:textColor="#FFFFFF"
+                android:background="@drawable/shape_topico"/>
         </LinearLayout>
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"/>
 </LinearLayout>

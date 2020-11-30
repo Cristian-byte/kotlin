@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -8,14 +7,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Toolbar
-            android:id="@+id/ToolbarConference"
+            android:id="@+id/toolbarConference"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Toolbar>
+            android:layout_height="wrap_content"/>
     </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -23,93 +22,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Expositor"
-                        android:textSize="30dp"
-                        android:layout_marginLeft="15dp">
-                    </TextView>
-                </RelativeLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/colorPrimary"
-                    android:layout_marginTop="1dp">
-                </View>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_gravity="center_horizontal"
+                    />
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
                     app:cardElevation="1dp"
-                    android:layout_margin="15dp">
-                    <ImageView
+                    android:layout_margin="15dp"
+                    android:background="@drawable/shape_parrafo">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/altoImageViewHome"
-                        android:src="@mipmap/ic_launcher"
-                        android:layout_margin="10dp">
-                    </ImageView>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_parrafo"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/tvSpeakerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre del Speaker"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <TextView
+                            android:id="@+id/tvSpeakerJob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="JobTitle"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <TextView
+                            android:id="@+id/tvSpeakerTrabajo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Trabajo"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <ImageView
+                            android:id="@+id/ivSpeakerTwitter"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_icons_twitter"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:id="@+id/tvSpeakerDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem ipsum dolo lorem imsum"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/tvDetailConferenceSpeakerDetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Nombre Apellido"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"
-                        android:gravity="center_horizontal"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="5dp">
-                    </TextView>
-                    <TextView
-                        android:id="@+id/tvDetailConferenceJobtitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Jobtitle"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorPrimary"
-                        android:gravity="center_horizontal"
-                        android:layout_centerInParent="true">
-                    </TextView>
-                    <TextView
-                        android:id="@+id/tvDetailConferenceTrabajo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Trabajo"
-                        android:textSize="23sp"
-                        android:textColor="@color/colorPrimary"
-                        android:gravity="center_horizontal"
-                        android:layout_centerInParent="true">
-                    </TextView>
-                    <ImageView
-                        android:id="@+id/ivDetailSpeakerTwitter"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@mipmap/ic_launcher"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center_horizontal">
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/tvDetailConferenceLorem"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras volutpat euismod libero, vel volutpat justo finibus vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac."
-                        android:textSize="21sp"
-                        android:textColor="@color/colorPrimary"
-                        android:gravity="center_horizontal"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="10dp">
-                    </TextView>
-                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </FrameLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
