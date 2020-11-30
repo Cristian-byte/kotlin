@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
         <Toolbar
             android:id="@+id/ToolbarUbication"
             android:layout_width="match_parent"
@@ -13,7 +15,8 @@
     </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -38,7 +41,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvDetailConferenceHour"
+                            android:id="@+id/tvDetailNombreLugar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lugar Platzi Conf"
@@ -61,6 +64,7 @@
                                 android:src="@drawable/ic_pin">
                             </ImageView>
                             <TextView
+                                android:id="@+id/tvUbicationDirrecion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Ubicación"
@@ -77,6 +81,7 @@
                         </View>
 
                         <LinearLayout
+                            android:id="@+id/llTelefonoLugar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -87,6 +92,7 @@
                                 android:src="@drawable/ic_phone">
                             </ImageView>
                             <TextView
+                                android:id="@+id/tvUbicationTelefono"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Telefono"
@@ -103,6 +109,7 @@
                         </View>
 
                         <LinearLayout
+                            android:id="@+id/llSitioWeb"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -113,6 +120,7 @@
                                 android:src="@drawable/ic_link">
                             </ImageView>
                             <TextView
+                                android:id="@+id/tvUbicationWebsite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Sitio Web"
