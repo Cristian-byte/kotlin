@@ -47,7 +47,29 @@ class UbicationFragment : Fragment() {
         mapFragment.getMapAsync(this)
     }
 
+    fun onMapReady(googleMap: GoogleMap?) {
+        val ubication = Ubication()
 
+        val zoom = 16f
+        val centerMap = LatLng(ubication.latitude, ubication.longitude)
+
+        googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap, zoom))
+
+        val centerMark = LatLng(ubication.latitude, ubication.longitude)
+        val markerOptions = MarkerOptions()
+        markerOptions.position(centerMark)
+        markerOptions.title("Platzi Conf 2019")
+
+        val bitmapDraw = context?.applicationContext?.let { ContextCompat.getDrawable(it, R.drawable.logo_platzi) } as BitmapDrawable
+        val smallMarker = Bitmap.createScaledBitmap(bitmapDraw.bitmap, 150, 150, false)
+
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
+
+        googleMap?.addMarker(markerOptions)
+        googleMap?.setOnMarkerClickListener(this)
+
+        googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle( ) )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,6 +91,9 @@ class UbicationFragment : Fragment() {
     }
 }
 
-private fun GoogleMap?.setOnMarkerClickListener(ubicationFragment: UbicationFragment) {
+private fun SupportMapFragment.getMapAsync(UbicationFragment: UbicationFragment) {
 
 }
+
+private fun GoogleMap?.setOnMarkerClickListener(UbicationFragment: UbicationFragment: UbicationFragment): Any =
+    Unit
